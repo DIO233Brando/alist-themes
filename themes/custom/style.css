@@ -1,0 +1,25 @@
+/* —— 1. 定义背景变量 —— */
+:root {
+    --alist-bg: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%2720%27%20height%3D%2712%27%3E%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%2720%27%20y2%3D%270%27%3E%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23cccccc%27/%3E%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%23eeeeee%27/%3E%3C/linearGradient%3E%3Crect%20width%3D%2720%27%20height%3D%2712%27%20fill%3D%27url(%23g)%27/%3E%3C/svg%3E");
+  }
+  
+  /* —— 2. 渲染白天/夜间背景 —— */
+  .hope-ui-light,
+  .hope-ui-dark {
+    background-image: var(--alist-bg) !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-attachment: fixed !important;
+    background-position: center !important;
+    background-color: #f0f0f0;
+    transition: background-image 1s ease-in-out, background-color 0.5s ease-in-out;
+  }
+  
+  /* —— 3. 手机端加深背景色 —— */
+  @media (max-width: 768px) {
+    .hope-ui-light,
+    .hope-ui-dark {
+      background-color: rgba(240, 240, 240, 0.9) !important;
+    }
+  }
+  
